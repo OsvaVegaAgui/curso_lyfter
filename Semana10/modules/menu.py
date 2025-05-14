@@ -2,16 +2,20 @@ from modules.student_functions import get_student_data, show_registered_students
 from modules.file_functions import export_student_data,import_student_data
 
 
-def handle_menu_option(opc):
+def handle_menu_option(opc,student_list):
+    
+    
     if(opc == 1):
-        get_student_data()
+        student_list = get_student_data()
     elif(opc == 2):
-        show_registered_students()
+        show_registered_students(student_list)
     elif(opc == 3):
-        get_top_three_students()
+        get_top_three_students(student_list)
     elif(opc == 4):
-        get_general_average()
+        get_general_average(student_list)
     elif(opc == 5):
-        export_student_data()
+        export_student_data(student_list)
     elif(opc == 6):
-        import_student_data()
+        student_list = import_student_data()
+        
+    return student_list

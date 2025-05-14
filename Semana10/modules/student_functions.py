@@ -1,5 +1,6 @@
-from modules.config import student_list
-from modules.config import InvalidGrade
+class InvalidGrade(Exception):
+    def __init__(self, grade):
+        super().__init__(f"The grade {grade} is not valid. Please enter a number between 0 and 100.")
 
 def get_valid_grade(subject):
     while True:
@@ -16,6 +17,7 @@ def get_valid_grade(subject):
 def get_student_data():
     
     another_student = ""
+    student_list_function=[]
     
     while(another_student != "no"):
         
@@ -39,11 +41,13 @@ def get_student_data():
             "science":science_grade,
         }
         
-        student_list.append(student)
+        student_list_function.append(student)
         
         another_student = input("Do you want to add another student? (yes/no): ").lower()
+    
+    return student_list_function
 
-def show_registered_students():
+def show_registered_students(student_list):
     
     for index in range(0, len(student_list)):
         
@@ -59,7 +63,7 @@ def show_registered_students():
         
         print(" --------------- * --------------- \n")
 
-def get_top_three_students():
+def get_top_three_students(student_list):
               
     sorted_students = sorted(student_list, key=lambda student: student["average"], reverse=True)
     
@@ -68,7 +72,7 @@ def get_top_three_students():
     for index in range(min(3, len(sorted_students))):
         print(f"#{index+1} {sorted_students[index]['name']}: {sorted_students[index]['average']}\n")
 
-def get_general_average():
+def get_general_average(student_list):
     
     try:
         

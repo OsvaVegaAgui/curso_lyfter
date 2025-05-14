@@ -1,7 +1,10 @@
 from modules.menu import handle_menu_option
-from modules.config import InvalidMenuOption
+class InvalidMenuOption(Exception):
+    def __init__(self, opc):
+        super().__init__(f"The option {opc} is not valid. Please enter a number between 1 and 7.")
 
 menu_option = 0
+student_list = []
 
 while(menu_option != 7):
     try:
@@ -12,7 +15,7 @@ while(menu_option != 7):
             raise InvalidMenuOption(menu_option)
         
         if(menu_option != 7):
-            handle_menu_option(menu_option)
+            student_list = handle_menu_option(menu_option,student_list)
             
     except InvalidMenuOption as error:
             print(f"Error: {error}")

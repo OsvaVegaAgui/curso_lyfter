@@ -1,7 +1,6 @@
-from modules.config import student_list
 import csv
 
-def export_student_data():
+def export_student_data(student_list):
     
     with open('students.csv', 'w', encoding='utf-8') as file:
         writer = csv.DictWriter(file, student_list[0].keys())
@@ -11,6 +10,9 @@ def export_student_data():
     print("\n File created successfully \n")
 
 def import_student_data():
+    
+    student_list_function=[]
+    
     try:
     
         with open('students.csv', 'r', encoding='utf-8') as file:
@@ -25,9 +27,11 @@ def import_student_data():
                     "social_studies": float(row["social_studies"]),
                     "science": float(row["science"])
                 }
-                student_list.append(student)
+                student_list_function.append(student)
                 
         print("\n File imported successfully \n")
+        
+        return student_list_function
         
     except FileNotFoundError:
         print("\nThe file 'students.csv' was not found. Please export data first.\n")
