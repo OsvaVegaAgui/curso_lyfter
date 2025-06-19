@@ -7,9 +7,7 @@
 #     6. `Feet`
 #     7. Ahora cree una clase de `Human` y conecte todas las clases de manera lógica por medio de atributos.
 
-class Head:
-	def __init__(self):
-		pass
+
 		
 class Hand:
 	def __init__(self):
@@ -28,15 +26,19 @@ class Leg():
 		self.feet = feet
   
 class Torso:
-	def __init__(self, head, right_arm, left_arm,right_leg,left_leg):
-		self.head = head
+	def __init__(self,right_arm, left_arm,right_leg,left_leg):
 		self.right_arm = right_arm
 		self.left_arm = left_arm
 		self.right_leg = right_leg
 		self.left_leg = left_leg
   
-
-head = Head()
+class Head:
+	def __init__(self, torso):
+		self.torso = torso
+class Human:
+    def __init__(self, head):
+        self.head = head
+    
 
 right_hand = Hand()
 right_arm = Arm(right_hand)
@@ -50,4 +52,10 @@ right_leg = Leg(right_feet)
 left_feet = Feet()
 left_leg = Leg(left_feet)
 
-torso = Torso(head, right_arm,left_arm,right_leg,left_leg)
+torso = Torso(right_arm,left_arm,right_leg,left_leg)
+
+head = Head(torso)
+
+human = Human(head)
+
+print(human)

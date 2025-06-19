@@ -6,14 +6,12 @@ import math
 
 class Circle:
     
-    radius = 0
+    def __init__(self, radius):
+        self.radius = radius
     
     def get_area(self):
         area = math.pi * self.radius**2
         print(f"Area: {round(area, 2)}")
         
-new_circle = Circle()
-
-new_circle.radius = int(input("Enter the radius of the circle: "))
-
+new_circle = Circle(6)
 new_circle.get_area()
