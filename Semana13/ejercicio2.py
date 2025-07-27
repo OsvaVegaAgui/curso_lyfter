@@ -2,11 +2,15 @@
 # que decore son números, y arroje una excepción de no ser así.
 
 def validate_numbers(func):
-    def wrapper(*args):
+    def wrapper(*args, **kwargs):
         for num in args:
             if not isinstance(num, (int, float)):
                 raise ValueError(f'The entered value is not a number: {num}.')
-        return func(*args)
+            
+        for key, value in kwargs.items():
+            if not isinstance(value, (int, float)):
+                raise ValueError(f'The entered value for "{key}" is not a number: {value}.')
+        return func(*args, **kwargs)
     return wrapper
 
 @validate_numbers
