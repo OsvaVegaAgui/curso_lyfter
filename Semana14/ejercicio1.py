@@ -31,6 +31,8 @@ class Stack:
     def pop(self):
         if self.top:
             self.top = self.top.next
+        else:
+            print("The stack is empty, cannot perform pop.")
         
 structure = Stack()
 

@@ -52,7 +52,11 @@ class DoubleEndedQueue:
         
         if self.head:
             self.head = self.head.next
-            self.head.prev = None
+            
+            if self.head is None:
+                self.tail = None
+            else:
+                self.head.prev = None
         else:
             self.tail = None
 
@@ -60,7 +64,11 @@ class DoubleEndedQueue:
         
         if self.tail:
             self.tail = self.tail.prev
-            self.tail.next = None
+            
+            if self.tail is None:
+                self.head = None
+            else:
+                self.tail.next = None
         else:
             self.head = None
 
