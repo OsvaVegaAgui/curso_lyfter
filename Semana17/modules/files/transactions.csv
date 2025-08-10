@@ -1,0 +1,7 @@
+idTransaction,title,idCategory,amount,date,type
+1,Salida a comer,2,25000.0,08/05/2025,1
+2,Ventas Negocio,1,85000.0,07/07/2025,2
+3,Sinpe ventas,2,8500.0,09/06/2025,2
+4,Pollito Frito,2,4500.0,01/08/2025,1
+5,Fiesta Familiar,3,18500.0,05/10/2023,1
+6,Venta de lote,1,2000000.0,09/08/2025,2
