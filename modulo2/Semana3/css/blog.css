@@ -1,0 +1,126 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+.container-text{
+    max-width: 760px;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.container-text h1, h2{
+    text-align: center;
+}
+
+.titulo{
+    font-size: 3.6rem;
+    color: #2d2e2e;
+}
+
+.sub-titulo{
+    color: #403f3e;
+    font-weight: 400;
+    margin-bottom: 1.0rem;
+    font-size: 1.7rem;
+}
+
+.autor{
+    text-align: center;
+    color: #403f3e;
+    font-weight: 400;
+}
+
+.autor svg{
+    display: inline-block;
+    margin: 1.0rem 0.5rem;
+}
+
+.container-image{
+    max-width: 768px;
+    margin: auto;
+}
+
+.container-text p{
+    color: #403f3e;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.cursiva{
+    background-color: whitesmoke;
+    padding: 1.0rem;
+    margin-bottom: 1.0rem;
+    font-style: italic;
+    font-size: 1.2rem !important;
+}
+
+.cuadro{
+    background-color: #ffbf6e;
+    border-radius: 5px;
+    margin: 1.5rem auto;
+    text-align: center;
+    float: right;
+    padding: 1.5rem;
+    margin-left: 2.0rem;
+    margin-right: 0;
+    width: 50%;
+}
+
+.cuadro p{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #2d2e2e; 
+}
+
+.cuadro a{
+    background-color: #403f3e;
+    color: white;
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 5px;
+}
