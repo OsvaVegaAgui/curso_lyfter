@@ -1,0 +1,58 @@
+/*poster.css*/
+
+.banner{
+    margin-top: 3.0rem;
+}
+
+.poster{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #ffde17;
+    border-radius: 10px;
+}
+
+.poster-content{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    padding-left: 1.2rem;    
+}
+
+.poster-content p{
+    margin: 0;
+}
+
+.poster-image{
+    height: 20rem;
+    margin: 0 2rem;
+}
+
+
+.main-text{
+    font-weight: bold;
+    margin-bottom: 1.0rem !important;
+    font-size: 1.5rem;
+    color: #04a89d;
+}
+
+.description-text{
+    line-height: 1.5rem;
+}
+
+.price-fruit{
+    padding: 10px 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #27b772;
+}
+
+.shop-button{
+    background-color: #04a89d;
+    color: white;
+    width: 6rem;
+    height: 2.2rem;
+    border-radius: 8px;
+    border: 1px solid #27b772;
+    cursor: pointer;
+}

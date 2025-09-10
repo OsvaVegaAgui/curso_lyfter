@@ -1,0 +1,35 @@
+/*header.css*/
+.navbar{
+    padding-top: 0.8rem !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #F1F5F9;  
+}
+
+.nav-main{
+    display: flex;
+    align-items:center;
+    gap: 20px;
+}
+.nav-button{
+    border: none;
+    background: none;
+    color: rgb(161, 161, 161);
+    cursor: pointer;
+}
+.nav-button:hover, .nav-button:active, .nav-button:focus{
+    color: rgb(101, 100, 100);
+}
+
+.brand-image{
+    width: 6rem;
+    cursor: pointer;
+}
+
+.input-search{
+    padding: 0.3rem;
+    width: 8.0rem;
+    border: 1px solid #e3e3e3;
+}
+
