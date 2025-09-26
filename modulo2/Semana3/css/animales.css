@@ -1,0 +1,76 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  background-color: #edecec;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+.contenedor{
+    margin: auto;
+    max-width: 1400px;
+}
+
+.animal{
+    display: inline-block;
+    width: 30%;
+    margin: 1.3rem;
+    padding: 0.8rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    vertical-align: top;
+}
+
+.animal img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.animal h3{
+    margin: 0.6rem 0;
+}
+
+.po1{background-color: #FFD6A5;}
+.po2{background-color: #A8E6CF;}
+.po3{background-color: #A0C4FF;}

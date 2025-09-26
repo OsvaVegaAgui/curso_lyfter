@@ -1,0 +1,42 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    background-color: #ffde17;
+    border-radius: 10px;
+    margin-top: 2.0rem;
+}
+
+.contact form{
+    width: 30.0rem;
+    margin: 2.0rem;
+    border-radius: 20px;
+}
+
+.contact h2{color: #04a89d;}
+
+.contact input, textarea{
+    width: 100%;
+    margin: 0.8rem 0rem;
+    padding: 1.0rem;
+    background-color: whitesmoke;
+    border-style: none;
+    color: #3c3f5e;
+    border-radius: 5px;
+}
+
+#email{
+    background-image: url("data:image/svg+xml;utf8,\<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239099A6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\<rect x='3' y='5' width='18' height='14' rx='2' ry='2'/><polyline points='3,7 12,13 21,7'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1.0rem center;
+    background-size: 1.2rem;
+}
+
+.btn{
+    background-color: #04a89d;
+    color: white;
+    width: 12rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #27b772;
+    cursor: pointer;
+}
