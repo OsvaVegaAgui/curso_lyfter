@@ -1,0 +1,34 @@
+<!-- Crea un form con inputs de correo, contraseña, nombre y apellidos. 
+También debe tener un radio button para seleccionar si es empleado o no. 
+Al seleccionar “sí”, se debe mostrar un input extra para empleo. 
+Si se vuelve a seleccionar “no”, este input se debe esconder. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+
+    <form>
+        <input type="email" id="email-input" placeholder="Email">
+
+        <input type="password" id="password-input" placeholder="Password">
+
+        <input type="text" id="name-input" placeholder="Name">
+
+        <input type="text" id="lastname-input" placeholder="Last Name">
+
+        <label><input type="radio" name="employee" id="employee-yes" value="yes">Yes</label>
+
+        <label><input type="radio" name="employee" id="employee-no" value="no" checked>No</label>
+
+        <input type="text" id="job-input" style="display:none;" placeholder="Employee">
+    </form>
+
+    <script src="js/ejercicio3.js"></script>
+
+</body>
+</html>
